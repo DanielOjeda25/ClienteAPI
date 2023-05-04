@@ -80,8 +80,8 @@ function Gondolas() {
 	};
 	const postGondolas = async () => {
 		const formData = new FormData();
-		formData.append("rubro", rubrosSeleccionado);
-		formData.append("cliente", clientesSeleccionado.value);
+		formData.append("cliente", clientesSeleccionado.value)
+		formData.append("rubro", rubrosSeleccionado)
 		formData.append("imagen", url);
 		try {
 			await axios.post("http://10.211.55.6:8080/gondolas", formData, {
